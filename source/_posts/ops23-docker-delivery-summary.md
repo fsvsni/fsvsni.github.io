@@ -12,7 +12,6 @@ categories:
   - 设备运维 RAG
 ---
 
-> 对应课件：20 Docker 交付深化与排障 + 全课总结
 > 本篇目标：讲清设备运维项目的生产化交付，并复盘系列二的知识脉络，形成完整学习地图。
 
 ## 一、设备运维系统的交付
@@ -116,7 +115,7 @@ docker build -f Dockerfile.base -t localhost/knowforge-rag-platform-base:py312 .
 
 ## 六、八大业务场景 → 两套学习笔记
 
-整套课件覆盖八大业务场景。本项目两套学习笔记：
+平台覆盖八大业务场景。本项目两套学习笔记：
 - **系列一**：enterprise_knowledge（企业知识库）— 23 篇
 - **系列二**（本篇）：equipment_ops（设备运维）— 23 篇
 
@@ -146,4 +145,4 @@ docker build -f Dockerfile.base -t localhost/knowforge-rag-platform-base:py312 .
 
 ---
 
-**系列二完**：从场景设定到 Docker 交付，设备运维 RAG 的完整工程脉络已经打通。至此，整套课件的两大业务场景（企业知识库 + 设备运维）学习笔记全部完成。
+**系列二完**：从场景设定到 Docker 交付，设备运维 RAG 的完整工程脉络已经打通。至此，平台两大业务场景（企业知识库 + 设备运维）的学习笔记全部完成。

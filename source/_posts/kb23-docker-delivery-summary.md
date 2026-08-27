@@ -12,7 +12,6 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：20 Docker 交付深化与排障 + 全课总结
 > 本篇目标：讲清企业知识库的**生产化交付**，并复盘整个系列一的知识脉络，形成一张可用的"学习地图"。
 
 ## 一、从开发到交付：Docker 的角色
@@ -135,7 +134,7 @@ curl http://localhost:8000/api/scenarios   # 应看到 enterprise_knowledge 等 
 
 ## 六、八大业务场景 → 两套学习笔记
 
-整套课件覆盖八大业务场景：enterprise_knowledge、saas_support、equipment_ops、compliance_qa、cross_border_risk、tender_contract_risk、insurance_claims、engineering_project_qa。
+平台覆盖八大业务场景：enterprise_knowledge、saas_support、equipment_ops、compliance_qa、cross_border_risk、tender_contract_risk、insurance_claims、engineering_project_qa。
 
 本系列（系列一）聚焦 **enterprise_knowledge（企业知识库）**；另一套系列二聚焦 **equipment_ops（设备运维）**。两套笔记共享同一套技术底座，但场景配置、资料形态、典型问题各不相同。
 

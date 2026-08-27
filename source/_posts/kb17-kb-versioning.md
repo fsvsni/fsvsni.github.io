@@ -11,7 +11,6 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：14 知识库多版本管理
 > 本篇目标：讲清企业知识库的**知识版本管理**——制度文件会更新（如报销额度调整），系统如何安全地把新版本上线，而不让员工查到过期制度。
 
 ## 一、为什么版本管理如此重要
@@ -64,7 +63,7 @@ def create_snapshot(scenario_id, version_label, data_pack):
 
 ### 3.2 data_pack 与企业仿真资料包
 
-课件第 16 讲提到的 **data_packs/enterprise_realistic_pack**：企业仿真增强资料包，包含更真实的制度资料。这些资料按版本归入快照。
+项目内置的 **data_packs/enterprise_realistic_pack** 仿真增强资料包，包含更真实的制度资料。这些资料按版本归入快照。
 
 ```python
 # data_packs/enterprise_realistic_pack/

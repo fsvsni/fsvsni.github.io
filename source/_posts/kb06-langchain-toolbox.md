@@ -11,7 +11,6 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：03 LangChain 生态系统
 > 本篇目标：讲清 LangChain 在企业知识库项目中**实际用到什么、哪些是自己实现的**，避免"用了 LangChain 就该用 RetrievalQA"的误区。
 
 ## 一、核心观点：LangChain 不是完整业务流程

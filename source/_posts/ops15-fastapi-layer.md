@@ -11,7 +11,6 @@ categories:
   - 设备运维 RAG
 ---
 
-> 对应课件：12 FastAPI 与异步 Web 框架
 > 本篇目标：从**设备运维**视角讲接口层——FastAPI 路由如何组织、WebSocket 如何支撑紧急告警的流式咨询、启动生命周期怎么管理。
 
 ## 一、为什么 FastAPI 适合运维问答
