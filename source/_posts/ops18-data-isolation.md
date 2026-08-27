@@ -1,6 +1,8 @@
 ---
 title: "系列二·第18篇 数据隔离：设备数据的安全红线"
 date: 2026-08-27 22:50:00
+series_group: 2
+series_order: 18
 tags:
   - RAG
   - 数据隔离

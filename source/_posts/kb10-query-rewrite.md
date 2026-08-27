@@ -1,6 +1,8 @@
 ---
 title: "系列一·第10篇 查询改写与变体：多轮追问怎么处理"
 date: 2026-08-27 17:30:00
+series_group: 1
+series_order: 10
 tags:
   - RAG
   - 查询改写

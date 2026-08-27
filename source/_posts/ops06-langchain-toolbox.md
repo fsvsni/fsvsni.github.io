@@ -1,6 +1,8 @@
 ---
 title: "系列二·第6篇 LangChain 工具箱：运维问答中的生态边界"
 date: 2026-08-27 20:50:00
+series_group: 2
+series_order: 6
 tags:
   - RAG
   - LangChain

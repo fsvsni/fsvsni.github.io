@@ -1,6 +1,8 @@
 ---
 title: "系列一·第20篇 质量评测：怎么证明问答是准的"
 date: 2026-08-27 19:10:00
+series_group: 1
+series_order: 20
 tags:
   - RAG
   - 质量评测

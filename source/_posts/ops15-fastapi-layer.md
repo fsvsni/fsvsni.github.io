@@ -1,6 +1,8 @@
 ---
 title: "系列二·第15篇 FastAPI 接口层：运维问答的入口"
 date: 2026-08-27 22:20:00
+series_group: 2
+series_order: 15
 tags:
   - RAG
   - FastAPI

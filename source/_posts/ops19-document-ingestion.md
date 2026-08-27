@@ -1,6 +1,8 @@
 ---
 title: "系列二·第19篇 文档入库：巡检表与告警SOP怎么进知识库"
 date: 2026-08-27 23:00:00
+series_group: 2
+series_order: 19
 tags:
   - RAG
   - 文档入库

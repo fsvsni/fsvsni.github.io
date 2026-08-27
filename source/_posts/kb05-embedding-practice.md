@@ -1,6 +1,8 @@
 ---
 title: "系列一·第5篇 Embedding 工程实践：BGE-M3 模型与向量化"
 date: 2026-08-27 16:40:00
+series_group: 1
+series_order: 5
 tags:
   - RAG
   - Embedding

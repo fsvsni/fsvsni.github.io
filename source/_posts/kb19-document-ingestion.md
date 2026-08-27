@@ -1,6 +1,8 @@
 ---
 title: "系列一·第19篇 文档入库：制度资料怎么变成可检索向量"
 date: 2026-08-27 19:00:00
+series_group: 1
+series_order: 19
 tags:
   - RAG
   - 文档入库

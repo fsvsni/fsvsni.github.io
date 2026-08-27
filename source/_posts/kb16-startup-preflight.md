@@ -1,6 +1,8 @@
 ---
 title: "系列一·第16篇 启动自检：环境不对就绝不假启动"
 date: 2026-08-27 18:30:00
+series_group: 1
+series_order: 16
 tags:
   - RAG
   - 启动校验

@@ -1,6 +1,8 @@
 ---
 title: "系列二·第22篇 可观测性：告警处理出问题能追得到"
 date: 2026-08-27 23:30:00
+series_group: 2
+series_order: 22
 tags:
   - RAG
   - 可观测

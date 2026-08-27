@@ -1,6 +1,8 @@
 ---
 title: "系列一·第1篇 企业制度问答助手：我要做什么"
 date: 2026-08-27 16:00:00
+series_group: 1
+series_order: 1
 tags:
   - RAG
   - enterprise_knowledge

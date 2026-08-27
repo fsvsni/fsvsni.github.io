@@ -1,6 +1,8 @@
 ---
 title: "系列一·第11篇 混合检索落地：Dense + BM25"
 date: 2026-08-27 17:40:00
+series_group: 1
+series_order: 11
 tags:
   - RAG
   - 混合检索

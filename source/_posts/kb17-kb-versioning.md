@@ -1,6 +1,8 @@
 ---
 title: "系列一·第17篇 知识库版本管理：制度更新怎么安全上线"
 date: 2026-08-27 18:40:00
+series_group: 1
+series_order: 17
 tags:
   - RAG
   - 版本管理

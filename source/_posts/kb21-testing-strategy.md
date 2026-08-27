@@ -1,6 +1,8 @@
 ---
 title: "系列一·第21篇 测试策略：把质量护栏焊死"
 date: 2026-08-27 19:20:00
+series_group: 1
+series_order: 21
 tags:
   - RAG
   - 测试

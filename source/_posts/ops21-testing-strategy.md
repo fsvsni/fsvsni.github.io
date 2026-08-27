@@ -1,6 +1,8 @@
 ---
 title: "系列二·第21篇 测试策略：运维系统的质量护栏"
 date: 2026-08-27 23:20:00
+series_group: 2
+series_order: 21
 tags:
   - RAG
   - 测试

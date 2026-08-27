@@ -1,6 +1,8 @@
 ---
 title: "系列二·第16篇 启动自检：运维系统不能带病运行"
 date: 2026-08-27 22:30:00
+series_group: 2
+series_order: 16
 tags:
   - RAG
   - 启动校验

@@ -1,6 +1,8 @@
 ---
 title: "系列一·第3篇 RAG 系统组成与项目架构全景"
 date: 2026-08-27 16:20:00
+series_group: 1
+series_order: 3
 tags:
   - RAG
   - 架构

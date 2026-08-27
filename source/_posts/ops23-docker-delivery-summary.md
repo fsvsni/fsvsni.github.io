@@ -1,6 +1,8 @@
 ---
 title: "系列二·第23篇 Docker 交付与系列总结：从课程到设备运维"
 date: 2026-08-27 23:40:00
+series_group: 2
+series_order: 23
 tags:
   - RAG
   - Docker

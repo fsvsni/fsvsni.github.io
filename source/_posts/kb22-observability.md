@@ -1,6 +1,8 @@
 ---
 title: "系列一·第22篇 可观测性：线上出问题能查得到"
 date: 2026-08-27 19:30:00
+series_group: 1
+series_order: 22
 tags:
   - RAG
   - 可观测

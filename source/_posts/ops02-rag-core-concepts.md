@@ -1,6 +1,8 @@
 ---
 title: "系列二·第2篇 RAG 核心概念：运维场景为什么需要向量检索"
 date: 2026-08-27 20:10:00
+series_group: 2
+series_order: 2
 tags:
   - RAG
   - Embedding

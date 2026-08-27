@@ -1,6 +1,8 @@
 ---
 title: "系列二·第3篇 设备运维系统架构：四类资料如何撑起问答"
 date: 2026-08-27 20:20:00
+series_group: 2
+series_order: 3
 tags:
   - RAG
   - 架构

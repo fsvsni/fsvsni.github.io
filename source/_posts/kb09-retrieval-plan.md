@@ -1,6 +1,8 @@
 ---
 title: "系列一·第9篇 检索策略：FAQ 直出还是翻制度全文"
 date: 2026-08-27 17:20:00
+series_group: 1
+series_order: 9
 tags:
   - RAG
   - 检索策略

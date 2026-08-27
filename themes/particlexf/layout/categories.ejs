@@ -21,7 +21,17 @@
         <% if (is_category(category.name)) { %>
         <%
             posts = category.posts;
-            posts.data.sort((a, b) => b.date - a.date);
+            posts.data.sort((a, b) => {
+                let sa = typeof a.series_group !== "undefined" && typeof a.series_order !== "undefined",
+                    sb = typeof b.series_group !== "undefined" && typeof b.series_order !== "undefined";
+                if (sa && sb) {
+                    if (a.series_group !== b.series_group) return a.series_group - b.series_group;
+                    return a.series_order - b.series_order;
+                }
+                if (sa) return -1;
+                if (sb) return 1;
+                return b.date - a.date;
+            });
         %>
         <% } %>
         <% }); %>

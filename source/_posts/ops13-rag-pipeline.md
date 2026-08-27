@@ -1,6 +1,8 @@
 ---
 title: "系列二·第13篇 RAG 主流程：从告警提问到流式处理方案"
 date: 2026-08-27 22:00:00
+series_group: 2
+series_order: 13
 tags:
   - RAG
   - Pipeline

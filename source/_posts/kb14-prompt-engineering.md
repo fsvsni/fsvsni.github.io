@@ -1,6 +1,8 @@
 ---
 title: "系列一·第14篇 Prompt 工程：让 LLM 说制度的话"
 date: 2026-08-27 18:10:00
+series_group: 1
+series_order: 14
 tags:
   - RAG
   - Prompt

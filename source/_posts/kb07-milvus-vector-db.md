@@ -1,6 +1,8 @@
 ---
 title: "系列一·第7篇 Milvus：企业资料怎么存怎么查"
 date: 2026-08-27 17:00:00
+series_group: 1
+series_order: 7
 tags:
   - RAG
   - Milvus

@@ -1,6 +1,8 @@
 ---
 title: "系列一·第15篇 FastAPI 接口层：HTTP 与 WebSocket"
 date: 2026-08-27 18:20:00
+series_group: 1
+series_order: 15
 tags:
   - RAG
   - FastAPI

@@ -1,6 +1,8 @@
 ---
 title: "系列二·第4篇 Docker 底座：运维系统的运行环境"
 date: 2026-08-27 20:30:00
+series_group: 2
+series_order: 4
 tags:
   - RAG
   - Docker

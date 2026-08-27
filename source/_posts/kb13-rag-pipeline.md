@@ -1,6 +1,8 @@
 ---
 title: "系列一·第13篇 RAG 主流程：提问到流式回答的 8 个阶段"
 date: 2026-08-27 18:00:00
+series_group: 1
+series_order: 13
 tags:
   - RAG
   - Pipeline

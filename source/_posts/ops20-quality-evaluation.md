@@ -1,6 +1,8 @@
 ---
 title: "系列二·第20篇 质量评测：怎么证明处理方案是对的"
 date: 2026-08-27 23:10:00
+series_group: 2
+series_order: 20
 tags:
   - RAG
   - 质量评测

@@ -1,6 +1,8 @@
 ---
 title: "系列一·第2篇 RAG 核心概念：Embedding、向量与检索"
 date: 2026-08-27 16:10:00
+series_group: 1
+series_order: 2
 tags:
   - RAG
   - Embedding

@@ -1,6 +1,8 @@
 ---
 title: "系列二·第17篇 知识库版本管理：SOP 更新怎么安全上线"
 date: 2026-08-27 22:40:00
+series_group: 2
+series_order: 17
 tags:
   - RAG
   - 版本管理

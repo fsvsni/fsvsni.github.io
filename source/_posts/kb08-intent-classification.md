@@ -1,6 +1,8 @@
 ---
 title: "系列一·第8篇 意图分类：员工这句话该怎么走"
 date: 2026-08-27 17:10:00
+series_group: 1
+series_order: 8
 tags:
   - RAG
   - 意图识别

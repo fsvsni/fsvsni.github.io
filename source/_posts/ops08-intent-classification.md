@@ -1,6 +1,8 @@
 ---
 title: "系列二·第8篇 意图分类：巡检员这句话该走哪条链路"
 date: 2026-08-27 21:10:00
+series_group: 2
+series_order: 8
 tags:
   - RAG
   - 意图识别

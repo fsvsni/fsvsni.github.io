@@ -1,6 +1,8 @@
 ---
 title: "系列二·第5篇 Embedding 工程实践：巡检与告警资料怎么向量化"
 date: 2026-08-27 20:40:00
+series_group: 2
+series_order: 5
 tags:
   - RAG
   - Embedding

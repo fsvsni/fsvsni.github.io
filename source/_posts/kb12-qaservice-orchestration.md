@@ -1,6 +1,8 @@
 ---
 title: "系列一·第12篇 QAService 编排：服务门面"
 date: 2026-08-27 17:50:00
+series_group: 1
+series_order: 12
 tags:
   - RAG
   - QAService

@@ -1,6 +1,8 @@
 ---
 title: "系列二·第14篇 Prompt 工程：让 LLM 说运维的行话"
 date: 2026-08-27 22:10:00
+series_group: 2
+series_order: 14
 tags:
   - RAG
   - Prompt

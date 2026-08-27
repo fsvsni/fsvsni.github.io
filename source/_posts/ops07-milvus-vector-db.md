@@ -1,6 +1,8 @@
 ---
 title: "系列二·第7篇 Milvus：四类运维资料的存储与检索"
 date: 2026-08-27 21:00:00
+series_group: 2
+series_order: 7
 tags:
   - RAG
   - Milvus

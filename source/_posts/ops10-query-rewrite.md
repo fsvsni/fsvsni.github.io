@@ -1,6 +1,8 @@
 ---
 title: "系列二·第10篇 查询改写：维修工追问“那个故障”怎么办"
 date: 2026-08-27 21:30:00
+series_group: 2
+series_order: 10
 tags:
   - RAG
   - 查询改写

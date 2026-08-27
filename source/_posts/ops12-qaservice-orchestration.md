@@ -1,6 +1,8 @@
 ---
 title: "系列二·第12篇 QAService 编排：四条链路的统一门面"
 date: 2026-08-27 21:50:00
+series_group: 2
+series_order: 12
 tags:
   - RAG
   - QAService

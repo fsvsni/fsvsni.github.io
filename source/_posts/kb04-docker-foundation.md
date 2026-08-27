@@ -1,6 +1,8 @@
 ---
 title: "系列一·第4篇 Docker 底座：让依赖一次跑起来"
 date: 2026-08-27 16:30:00
+series_group: 1
+series_order: 4
 tags:
   - RAG
   - Docker

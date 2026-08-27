@@ -1,6 +1,8 @@
 ---
 title: "系列二·第1篇 设备运维智能助手：我要做什么"
 date: 2026-08-27 20:00:00
+series_group: 2
+series_order: 1
 tags:
   - RAG
   - equipment_ops

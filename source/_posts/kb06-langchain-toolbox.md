@@ -1,6 +1,8 @@
 ---
 title: "系列一·第6篇 LangChain 工具箱：生态与自研的边界"
 date: 2026-08-27 16:50:00
+series_group: 1
+series_order: 6
 tags:
   - RAG
   - LangChain

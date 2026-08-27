@@ -1,6 +1,8 @@
 ---
 title: "系列一·第18篇 数据隔离：企业知识的权限红线"
 date: 2026-08-27 18:50:00
+series_group: 1
+series_order: 18
 tags:
   - RAG
   - 数据隔离

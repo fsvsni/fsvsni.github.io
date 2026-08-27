@@ -1,6 +1,8 @@
 ---
 title: "系列二·第9篇 检索策略：告警问题怎么查、查多少"
 date: 2026-08-27 21:20:00
+series_group: 2
+series_order: 9
 tags:
   - RAG
   - 检索策略
