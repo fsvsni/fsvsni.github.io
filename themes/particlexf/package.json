@@ -1,0 +1,22 @@
+{
+  "name": "hexo-theme-particlexf",
+  "version": "1.0.0",
+  "description": "ParticleX Hexo theme fork with galaxy background, soft dual themes, TOC drawer, code collapse, and note callouts",
+  "keywords": [
+    "hexo",
+    "theme",
+    "particlexf",
+    "blog"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FloranceYeh/hexo-theme-particlexf"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

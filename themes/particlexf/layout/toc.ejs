@@ -1,0 +1,37 @@
+<%
+    var hasComments = page.comments && (
+        theme.gitalk.enable ||
+        theme.giscus.enable ||
+        theme.waline.enable ||
+        theme.twikoo.enable
+    );
+%>
+<% if (page.toc !== false && toc(page.content)) { %>
+<aside class="toc-sidebar" id="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-panel" id="toc-panel">
+        <div class="toc-panel-header">
+            <div class="toc-header">
+                <i class="fa-solid fa-list"></i> 目录
+            </div>
+            <button type="button" class="toc-close" id="toc-close" aria-label="Close table of contents">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="toc-wrapper" id="toc-wrapper">
+            <%- toc(page.content, { class: 'toc', list_number: true }) %>
+        </div>
+        <div class="toc-nav-buttons">
+            <a href="javascript:;" class="toc-btn" id="toc-btn-top" title="回到顶部">
+                <i class="fa-solid fa-arrow-up"></i> 顶部
+            </a>
+            <a href="<%= hasComments ? '#comment' : '#footer' %>" class="toc-btn" id="toc-btn-comment" title="<%= hasComments ? '查看评论' : '前往底部' %>">
+                <i class="fa-solid <%= hasComments ? 'fa-comments' : 'fa-arrow-down' %>"></i> <%= hasComments ? '评论' : '底部' %>
+            </a>
+        </div>
+    </div>
+</aside>
+<button type="button" class="toc-fab" id="toc-fab" aria-label="Open table of contents" aria-controls="toc-sidebar" aria-expanded="false">
+    <i class="fa-solid fa-list" aria-hidden="true"></i>
+    <span>目录</span>
+</button>
+<% } %>

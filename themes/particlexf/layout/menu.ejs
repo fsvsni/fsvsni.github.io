@@ -1,0 +1,66 @@
+<div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="<%- config.root %>">
+            <span><%= config.title.toUpperCase() %></span>
+        </a>
+        <% Object.entries(theme.menu).forEach(([key, value]) => { %>
+        <a href="<%- url_for(value.link) %>">
+            <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
+            <span>&ensp;<%= key %></span>
+        </a>
+        <% }); %>
+        <% if (theme.stellars.enable && theme.stellars.seedChanger.enable) { %>
+        <span class="seed-container">
+            <span class="seed-text">SEED</span>
+            <span class="expandable-form">
+                <input class="seed-input" type="number" inputmode="numeric" step="1">
+                <button type="button" onclick="updateGalaxy(this)" aria-label="Change galaxy seed" title="Change galaxy seed">
+                    <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                </button>
+            </span>
+            <span class="seed-changer">CHANGER</span>
+        </span>
+        <% } %>
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;<%= config.title.toUpperCase() %></span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                <% Object.entries(theme.menu).forEach(([key, value]) => { %>
+                <a href="<%- url_for(value.link) %>">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
+                    </div>
+                </a>
+                <% }); %>
+                <% if (theme.stellars.enable && theme.stellars.seedChanger.enable) { %>
+                <span class="seed-container">
+                    <span class="seed-text">SEED</span>
+                    <span class="expandable-form">
+                        <input class="seed-input" type="number" inputmode="numeric" step="1">
+                        <button type="button" onclick="updateGalaxy(this)" aria-label="Change galaxy seed" title="Change galaxy seed">
+                            <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                        </button>
+                    </span>
+                    <span class="seed-changer">CHANGER</span>
+                </span>
+                <% } %>
+            </div>
+        </transition>
+    </nav>
+    <% if (theme.theme.toggle) { %>
+    <button id="theme-toggle" type="button" aria-label="Switch theme">
+        <i class="fa-solid fa-sun theme-icon-sun" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon theme-icon-moon" aria-hidden="true"></i>
+    </button>
+    <% } %>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>

@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.lnk
+pnpm-lock.yaml
+package-lock.json

@@ -1,0 +1,197 @@
+# ParticleXF Configuration
+# https://github.com/FloranceYeh/hexo-theme-particlexf
+
+# Avatar image (place file under site source/images/)
+avatar: /images/avatar.jpg
+
+# Home page background image
+background:
+    - /images/background.jpg
+
+# Loading image
+loading: /images/loading.gif
+
+# Customize theme
+theme:
+    # toggle is used to enable/disable theme color toggle button in the header
+    toggle: true
+    # Default theme mode: "dark" or "light"
+    default_theme: dark
+    # Enable to override the default accent colors and generate a full palette
+    # overrides: optional per-variable overrides (any CSS variable from main.css)
+    custom_theme_color:
+        enable: true
+        dark_accent: "#3d7a5c"
+        light_accent: "#7eb89a"
+        overrides: {}
+
+# Optional colors for category and tag
+tagcolors:
+    - "#8f9a5c"
+    - "#5a9aa8"
+    - "#6a8fb0"
+    - "#5a9a8a"
+    - "#c48a82"
+
+# ParticleXF theme icon uses Font Awesome 6
+# https://fontawesome.com
+
+# Main menu navigation
+menu:
+    Home:
+        name: house
+        theme: solid
+        link: /
+    About:
+        name: id-card
+        theme: solid
+        link: /about
+    Archives:
+        name: box-archive
+        theme: solid
+        link: /archives
+    Categories:
+        name: bookmark
+        theme: solid
+        link: /categories
+    Tags:
+        name: tags
+        theme: solid
+        link: /tags
+
+# Side info card
+card:
+    enable: true
+    description: |
+        Your name here.
+        Your blog subtitle.
+    iconLinks:
+        Github:
+            name: github
+            theme: brands
+            link: https://github.com/YOUR_GITHUB_USERNAME
+        Email:
+            name: envelope
+            theme: solid
+            link: mailto:you@example.com
+    friendLinks:
+        Home: /
+        About: /about
+
+# Footer info
+footer:
+    since: 2025
+    ICP:
+        enable: false
+        code:
+        link:
+
+# Polyfill
+# https://polyfill.io
+polyfill:
+    enable: true
+    features:
+        - default
+
+# Highlight.js
+# https://highlightjs.org
+highlight:
+    enable: true
+    # dual themes loaded in import.ejs: atom-one-dark-reasonable / atom-one-light
+    style: atom-one-dark-reasonable
+    # soft wrap long lines inside code blocks
+    wrap: true
+    # auto-collapse long code blocks (line count threshold)
+    collapse:
+        enable: true
+        lines: 20
+
+# KaTeX math rendering
+math:
+    enable: true
+
+# mermaid chart
+mermaid:
+    enable: true
+    version: "7.1.2"
+    options:
+
+# Image preview
+preview:
+    enable: true
+
+# Article encryption
+crypto:
+    enable: false
+
+# Search
+search:
+    enable: true
+
+# Stellars Background
+stellars:
+    enable: true
+    seedChanger:
+        enable: false
+
+# giscus
+# https://github.com/giscus/giscus
+giscus:
+    enable: false
+    src: https://giscus.app/client.js
+    repo:
+    repoID:
+    category:
+    categoryID:
+    mapping: pathname
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: bottom
+    theme: preferred_color_scheme
+    lang:
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+    enable: false
+    clientID:
+    clientSecret:
+    repo:
+    owner:
+    admin:
+    language:
+    proxy:
+
+# Waline
+# https://github.com/walinejs/waline
+waline:
+    enable: true
+    serverURL: # Waline server address url, you should set this to your own link
+    locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
+    commentCount: true # If false, comment count will only be displayed in post page, not in home page
+    pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
+    # Actual selector is set in layout/comment.ejs (follows data-theme)
+    dark: false
+    emoji: # Custom emoji
+        - https://unpkg.com/@waline/emojis@1.2.0/qq
+        - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
+    search: false
+    meta: # Comment information, valid meta are nick, mail and link
+        - nick
+        - mail
+    requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
+        - nick
+    lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    wordLimit: 0 # Word limit, no limit when setting to 0
+    login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
+    pageSize: 10 # Comment per page
+
+# Twikoo
+# https://github.com/imaegoo/twikoo
+twikoo:
+    enable: false
+    envID:
+    region:
+    path: location.pathname
+    lang:

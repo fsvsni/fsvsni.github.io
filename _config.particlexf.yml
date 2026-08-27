@@ -1,0 +1,72 @@
+# ParticleXF 主题覆盖配置（站点根目录，优先级高于 themes/particlexf/_config.yml）
+# 修改后需 hexo clean 重新生成
+
+# 图片资源
+avatar: /images/avatar.jpg
+background:
+  - /images/background.jpg
+loading: /images/loading.jpg
+
+# 中文菜单
+menu:
+  首页:
+    name: house
+    theme: solid
+    link: /
+  关于:
+    name: id-card
+    theme: solid
+    link: /about
+  归档:
+    name: box-archive
+    theme: solid
+    link: /archives
+  分类:
+    name: bookmark
+    theme: solid
+    link: /categories
+  标签:
+    name: tags
+    theme: solid
+    link: /tags
+
+# 侧边信息卡
+card:
+  enable: true
+  description: |
+    fanshan1213 的技术笔记
+    记录技术学习与思考
+  iconLinks:
+    Github:
+      name: github
+      theme: brands
+      link: https://github.com/fsvsni
+
+# 页脚
+footer:
+  since: 2026
+  ICP:
+    enable: false
+    code:
+    link:
+
+# 评论适配器：暂全部关闭（待确定评论方案后再启用）
+waline:
+  enable: false
+  serverURL:
+giscus:
+  enable: false
+  repo:
+  repoID:
+  category:
+  categoryID:
+gitalk:
+  enable: false
+  clientID:
+  clientSecret:
+  repo:
+  owner:
+  admin:
+twikoo:
+  enable: false
+  envID:

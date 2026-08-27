@@ -1,0 +1,69 @@
+<%
+    let type = "post";
+    if (is_home()) type = "index";
+    if (is_post() || is_page()) type = "post";
+    if (is_category() || page.type === "categories") type = "categories";
+    if (is_tag() || page.type === "tags") type = "tags";
+    if (is_archive()) type = "archives";
+    if (is_current("links")) type = "links"; 
+    let title = page.title + " | " + config.title;
+    if (is_home()) title = config.title;
+    if (is_post() || is_page()) title = page.title + " | " + config.title;
+    if (is_category()) title = "Categories: " + page.category + " | " + config.title;
+    if (is_tag()) title = "Tags: " + page.tag + " | " + config.title;
+    if (is_archive()) title = "Archives | " + config.title;
+    if (is_current("links")) title = "Links | " + config.title;
+%>
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+<head>
+    <meta charset="utf-8" />
+    <script>
+    (function(){var t,dt;try{t=localStorage.getItem("theme");dt="<%- theme.theme.default_theme || 'dark' %>"}catch(e){dt="dark"}if(t!=="light"&&t!=="dark")t=dt;document.documentElement.setAttribute("data-theme",t);})();
+    </script>
+    <title><%= title %></title>
+    <meta name="author" content="<%- config.author %>" />
+    <meta name="description" content="<%- config.description %>" />
+    <meta name="keywords" content="<%- config.keywords %>" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="<%- url_for(theme.avatar) %>" />
+    <%- partial("import", { type }) %>
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>页面加载中...</p>
+                    <img src="<%- url_for(theme.loading) %>" />
+                </div>
+            </div>
+        </transition>
+        <%- partial("menu") %>
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <%- partial(type) %>
+            <%- partial("footer") %>
+        </div>
+        <% if (theme.preview.enable) { %>
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        <% } %>
+    </div>
+    <script src="<%- url_for("/js/main.js") %>"></script>
+    <script src="<%- url_for("/js/theme.js") %>"></script>
+    <% if (theme.stellars.enable) { %>
+    <script src="<%- url_for("/js/lib/stellars.js") %>"></script>
+    <% } %>
+    <% if ((type === "post" || type ==="links") && page.comments) { %>
+    <%- partial("comment") %>
+    <% } %>
+</body>
+</html>

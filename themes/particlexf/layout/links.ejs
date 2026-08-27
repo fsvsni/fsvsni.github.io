@@ -1,0 +1,58 @@
+<div class="article">
+    <div class="links-content">
+
+    <% const linkData = site.data.links || {}; %>
+
+    <% Object.keys(linkData).forEach(function(category) { %>
+        <h2 class="link-category-title">
+        <i class="fa fa-link"></i>
+        <%= category %>
+        </h2>
+
+        <div class="link-navigation">
+        <% const items = linkData[category]; %>
+        <% Object.keys(items).forEach(function(key) { %>
+            <% const item = items[key]; %>
+            
+            <a href="<%= item.url %>" target="_blank" class="card">
+            <div class="card-header">
+                <img src="<%= item.ava %>" alt="<%= item.name %>" onerror="this.src='/images/avatar.jpg'">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title"><%= item.name %></h3>
+                <p class="card-desc" title="<%= item.des %>"><%= item.des %></p>
+            </div>
+            </a>
+
+        <% }); %>
+        </div>
+    <% }); %>
+    </div>
+
+    <div class="content" v-pre>
+        <%- page.content %>
+    </div>
+
+    <% if (page.comments) { %>
+    <% if (theme.gitalk.enable) { %>
+    <div id="comment">
+        <div id="gitalk-container"></div>
+    </div>
+    <% } %>
+    <% if (theme.giscus.enable) { %>
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    <% } %>
+    <% if (theme.waline.enable) { %>
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    <% } %>
+    <% if (theme.twikoo.enable) { %>
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
+    <% } %>
+    <% } %>
+</div>
