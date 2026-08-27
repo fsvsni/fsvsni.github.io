@@ -126,7 +126,7 @@ search:
 
 # Stellars Background
 stellars:
-    enable: true
+    enable: false
     seedChanger:
         enable: false
 
