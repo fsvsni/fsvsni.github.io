@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 2 讲 RAG 核心概念深入
+> 对应课件：02 RAG 核心概念深入
 > 本篇目标：把 Embedding、向量数据库、Dense/Sparse/Hybrid 检索、Reranker 这几个"地基概念"讲透，它们是理解整个企业知识库系统的前提。
 
 ## 一、Embedding：把文字变成数学

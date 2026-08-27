@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 10 讲 RAG Pipeline 主流程深度解析
+> 对应课件：10 RAG Pipeline 主流程
 > 本篇目标：把企业知识库的**RAG 主流程（8 个 Stage）**讲透——从员工提问到流式回答，每一步做什么、缓存怎么设计、信息不足怎么处理。
 
 ## 一、Pipeline vs Chain

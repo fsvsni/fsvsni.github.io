@@ -10,7 +10,7 @@ categories:
   - 设备运维 RAG
 ---
 
-> 对应课件：第 9 讲 QAService 核心编排
+> 对应课件：09 QAService 核心编排
 > 本篇目标：从**设备运维**视角讲服务编排——QAService 如何统一管理四条链路（巡检/告警/维修/工单），如何用 Generator 实现流式输出。
 
 ## 一、QAService 的职责

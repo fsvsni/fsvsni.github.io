@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 1 讲 第三部分（环境搭建与首次启动）
+> 对应课件：01 项目概述与 Docker 环境搭建 · 第三部分（环境搭建与首次启动）
 > 本篇目标：在企业知识库项目里，Docker/Compose 如何作为"运行底座"，把 API、MySQL、Redis、Milvus、etcd、MinIO 一整套依赖跑起来，并完成首次启动。
 
 ## 一、为什么需要 Docker 底座

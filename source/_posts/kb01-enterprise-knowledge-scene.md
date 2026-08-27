@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 0 章 Vibe Coding + 第 1 讲 项目概述与 Docker 环境搭建
+> 对应课件：00 Vibe Coding 入门实训 + 01 项目概述与 Docker 环境搭建
 > 本篇目标：说清楚"企业知识库（enterprise_knowledge）"这个场景到底要解决什么问题、系统长什么样、和普通 LLM 有什么区别。
 
 ## 一、场景背景：公司内部的知识为什么"问不到"

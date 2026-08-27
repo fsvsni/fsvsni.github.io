@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 12 讲 FastAPI 接口层实战
+> 对应课件：12 FastAPI 与异步 Web 框架
 > 本篇目标：讲清企业知识库的**接口层**——FastAPI 应用如何组织、HTTP 路由提供什么、WebSocket 如何实现流式问答、启动生命周期怎么管理。
 
 ## 一、为什么用 FastAPI

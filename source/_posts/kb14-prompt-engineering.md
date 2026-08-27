@@ -11,7 +11,7 @@ categories:
   - 企业知识库 RAG
 ---
 
-> 对应课件：第 11 讲 Prompt 工程实战
+> 对应课件：11 Prompt 工程与 Profile 系统
 > 本篇目标：讲清企业知识库的 **Prompt 体系**——为什么不是一个 Prompt 走天下、Prompt Profile 系统怎么设计、费用类/合规类模板怎么写。
 
 ## 一、核心观点：不是一个 Prompt 走天下
