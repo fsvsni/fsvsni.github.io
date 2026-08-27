@@ -1,0 +1,12 @@
+<%
+    // 构建全部文章 JSON（供主页站内搜索）
+    let searchData = site.posts.sort("date", -1).data.map(function (p) {
+        return {
+            title: p.title,
+            url: url_for(p.path),
+            cat: (p.categories && p.categories.data.length) ? p.categories.data[0].name : "",
+            date: p.date ? p.date.format("YYYY-MM-DD") : "",
+        };
+    });
+%>
+<script type="application/json" id="blog-posts-json"><%- JSON.stringify(searchData) %></script>

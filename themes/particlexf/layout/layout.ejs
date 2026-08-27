@@ -31,6 +31,9 @@
     />
     <link rel="icon" href="<%- url_for(theme.avatar) %>" />
     <%- partial("import", { type }) %>
+    <% if (is_home()) { %>
+    <%- partial("projects-data") %>
+    <% } %>
 </head>
 <body>
     <canvas id="starCanvas"></canvas>
@@ -59,6 +62,9 @@
     </div>
     <script src="<%- url_for("/js/main.js") %>"></script>
     <script src="<%- url_for("/js/theme.js") %>"></script>
+    <% if (is_home()) { %>
+    <script src="<%- url_for("/js/project-search.js") %>"></script>
+    <% } %>
     <% if (theme.stellars.enable) { %>
     <script src="<%- url_for("/js/lib/stellars.js") %>"></script>
     <% } %>
