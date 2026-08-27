@@ -133,19 +133,19 @@ stellars:
 # giscus
 # https://github.com/giscus/giscus
 giscus:
-    enable: false
+    enable: true
     src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
+    repo: fsvsni/fsvsni.github.io
+    repoID: R_kgDOUFuYdg
+    category: Announcements
+    categoryID: DIC_kwDOUFuYds4DETEJ
     mapping: pathname
     strict: 0
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: bottom
     theme: preferred_color_scheme
-    lang:
+    lang: zh-CN
 
 # Gitalk
 # https://github.com/gitalk/gitalk
