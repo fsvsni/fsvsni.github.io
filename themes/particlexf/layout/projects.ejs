@@ -1,0 +1,87 @@
+<%
+    // 统计两个项目的文章数
+    let kbCount = 0, opsCount = 0;
+    site.posts.data.forEach(function (p) {
+        if (!p.categories || !p.categories.data) return;
+        let names = p.categories.data.map(function (c) { return c.name; });
+        if (names.indexOf("企业知识库 RAG") !== -1) kbCount++;
+        if (names.indexOf("设备运维 RAG") !== -1) opsCount++;
+    });
+    // 构建全部文章 JSON（供主页站内搜索）
+    let searchData = site.posts.sort("date", -1).data.map(function (p) {
+        return {
+            title: p.title,
+            url: url_for(p.path),
+            cat: (p.categories && p.categories.data.length) ? p.categories.data[0].name : "",
+            date: p.date ? p.date.format("YYYY-MM-DD") : "",
+        };
+    });
+%>
+<div id="project-nav">
+    <div class="project-cards">
+        <a class="project-card" href="<%- url_for("/categories/企业知识库-RAG/") %>">
+            <div class="pc-icon">
+                <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="pc-body">
+                <div class="pc-name">企业知识库 RAG</div>
+                <div class="pc-desc">enterprise_knowledge · hr / it / finance 制度问答</div>
+                <div class="pc-meta"><%= kbCount %> 篇学习笔记</div>
+            </div>
+            <div class="pc-go">进入项目 <i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+        <a class="project-card" href="<%- url_for("/categories/设备运维-RAG/") %>">
+            <div class="pc-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="pc-body">
+                <div class="pc-name">设备运维 RAG</div>
+                <div class="pc-desc">equipment_ops · 巡检 / 告警 / 维修 / 工单</div>
+                <div class="pc-meta"><%= opsCount %> 篇学习笔记</div>
+            </div>
+            <div class="pc-go">进入项目 <i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+    </div>
+    <div class="project-search">
+        <div class="ps-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="project-search-input" type="text" placeholder="搜索全部笔记（标题 / 分类）…" autocomplete="off" />
+        </div>
+        <div id="project-search-results"></div>
+    </div>
+</div>
+<script>
+(function () {
+    var POSTS = <%- JSON.stringify(searchData) %>;
+    var input = document.getElementById("project-search-input");
+    var box = document.getElementById("project-search-results");
+    if (!input || !box) return;
+    function norm(s) {
+        return String(s).toLowerCase().replace(/\s+/g, "");
+    }
+    function esc(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    input.addEventListener("input", function () {
+        var kw = norm(input.value);
+        if (!kw) {
+            box.innerHTML = "";
+            box.style.display = "none";
+            return;
+        }
+        var hits = POSTS.filter(function (p) {
+            return norm(p.title).indexOf(kw) !== -1 || norm(p.cat).indexOf(kw) !== -1;
+        });
+        if (!hits.length) {
+            box.innerHTML = '<div class="ps-empty">没有匹配的笔记，换个关键词试试</div>';
+        } else {
+            box.innerHTML = hits.slice(0, 15).map(function (p) {
+                var cat = p.cat ? '<span class="ps-cat">' + esc(p.cat) + "</span>" : "";
+                var date = p.date ? '<span class="ps-date">' + esc(p.date) + "</span>" : "";
+                return '<a class="ps-item" href="' + esc(p.url) + '"><span class="ps-title">' + esc(p.title) + "</span>" + cat + date + "</a>";
+            }).join("");
+        }
+        box.style.display = "block";
+    });
+})();
+</script>
