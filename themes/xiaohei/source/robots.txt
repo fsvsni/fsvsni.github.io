@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fsvsni.github.io/sitemap.xml

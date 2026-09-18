@@ -1,0 +1,12 @@
+<section class="archive">
+  <header class="page-head">
+    <p class="eyebrow">标签</p>
+    <h1>标签</h1>
+    <p><%= site.tags.length %> 个标签</p>
+  </header>
+  <div class="tag-row" style="margin-top:16px;flex-wrap:wrap;gap:10px;">
+    <% site.tags.sort('name').each(function(t){ %>
+    <a class="chip" href="<%- url_for(t.path) %>">#<%= t.name %> · <%= t.posts.length %></a>
+    <% }) %>
+  </div>
+</section>

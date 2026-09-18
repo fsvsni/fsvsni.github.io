@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'zh-CN' %>">
+<head>
+<%- include('_partial/head') %>
+</head>
+<body class="docs">
+  <div class="progress" id="readProgress" hidden></div>
+  <%- include('_partial/header') %>
+
+  <div class="docs-shell">
+    <%- include('_partial/sidebar') %>
+
+    <div class="docs-main">
+      <main class="main<%= page.layout === 'post' ? ' main-post' : '' %>">
+        <%- body %>
+      </main>
+      <%- include('_partial/footer') %>
+    </div>
+  </div>
+
+  <%- include('_partial/modals') %>
+  <script src="<%- url_for('/js/main.js') %>"></script>
+</body>
+</html>

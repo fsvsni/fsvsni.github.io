@@ -1,0 +1,58 @@
+<article class="article">
+  <header class="article-head">
+    <div class="post-card-meta">
+      <% page.categories.each(function(c){ %>
+      <a class="chip" href="<%- url_for(c.path) %>"><%= c.name %></a>
+      <% }) %>
+      <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY-MM-DD') %></time>
+      <span><%= word_count(page.content) %> 字 · 约 <%= read_time(page.content) %> 分钟</span>
+    </div>
+    <h1><%= page.title %></h1>
+    <% if (page.description) { %><p class="lede"><%= page.description %></p><% } %>
+    <% if (page.tags.length) { %>
+    <div class="tag-row">
+      <% page.tags.each(function(tag){ %>
+      <a href="<%- url_for(tag.path) %>">#<%= tag.name %></a>
+      <% }) %>
+    </div>
+    <% } %>
+  </header>
+
+  <details class="toc-mobile" id="tocMobile">
+    <summary>目录</summary>
+    <nav id="tocNavMobile"></nav>
+  </details>
+
+  <div class="article-layout">
+    <div class="article-body" id="articleBody"><%- page.content %></div>
+    <aside class="toc" id="tocBox">
+      <p class="toc-title">本页目录</p>
+      <nav id="tocNav"></nav>
+    </aside>
+  </div>
+
+  <% if (page.prev || page.next) { %>
+  <nav class="post-nav">
+    <% if (page.prev) { %>
+    <a href="<%- url_for(page.prev.path) %>"><span>上一篇</span><strong><%= page.prev.title %></strong></a>
+    <% } %>
+    <% if (page.next) { %>
+    <a href="<%- url_for(page.next.path) %>"><span>下一篇</span><strong><%= page.next.title %></strong></a>
+    <% } %>
+  </nav>
+  <% } %>
+</article>
+
+<% const related = related_posts(page, 3); if (related.length) { %>
+<section class="related">
+  <h2>相关笔记</h2>
+  <div class="related-grid">
+    <% related.forEach(function(p){ %>
+    <a href="<%- url_for(p.path) %>">
+      <small><%= date(p.date, 'YYYY-MM-DD') %></small>
+      <strong><%= p.title %></strong>
+    </a>
+    <% }) %>
+  </div>
+</section>
+<% } %>

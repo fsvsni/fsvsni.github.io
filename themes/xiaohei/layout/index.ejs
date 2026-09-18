@@ -1,0 +1,46 @@
+<% if (!page.current || page.current === 1) { %>
+<section class="hero docs-hero">
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+           poster="<%- url_for(theme.hero.poster) %>" aria-label="首页背景">
+      <% if (theme.hero.video) { %><source src="<%- url_for(theme.hero.video) %>" type="video/mp4"><% } %>
+    </video>
+    <div class="hero-cover-overlay">
+      <div class="hero-copy">
+        <p class="eyebrow"><%= theme.hero.eyebrow %></p>
+        <h1><%= theme.hero.title %></h1>
+        <p class="hero-desc"><%= theme.hero.desc %></p>
+        <div class="hero-meta">
+          <span><%= site.posts.length %> 篇笔记</span>
+          <span><%= theme.footer_name %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<section class="post-list">
+  <p class="list-kicker">最新文章</p>
+  <% page.posts.each(function(post){ const cats = post.categories.toArray(); %>
+  <article class="post-card">
+    <div class="post-card-meta">
+      <% if (cats.length) { const c = cats[cats.length - 1]; %>
+      <a class="chip" href="<%- url_for(c.path) %>"><%= c.name %></a>
+      <% } %>
+      <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY-MM-DD') %></time>
+    </div>
+    <h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+    <p class="excerpt"><%= post_summary(post) %></p>
+    <% if (post.tags.length) { %>
+    <div class="tag-row">
+      <% post.tags.each(function(tag){ %>
+      <a href="<%- url_for(tag.path) %>">#<%= tag.name %></a>
+      <% }) %>
+    </div>
+    <% } %>
+  </article>
+  <% }) %>
+</section>
+
+<%- include('_partial/pager') %>

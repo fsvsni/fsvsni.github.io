@@ -43,14 +43,14 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-# ParticleXF 主题自带浏览器端 Highlight.js，禁用 Hexo 内置高亮避免冲突
-syntax_highlighter:
+# xiaohei 主题使用 Hexo 内置高亮（hljs 类名），与参考站代码块结构一致
+syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   preprocess: true
   line_number: true
@@ -106,7 +106,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: particlexf
+theme: xiaohei
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -120,3 +120,25 @@ search:
   field: post
   content: true
   format: html
+
+# RSS 订阅（hexo-generator-feed）
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true
+  content_limit: 200
+
+# 站点地图（hexo-generator-sitemap）
+sitemap:
+  path: sitemap.xml
+
+# Markdown 渲染（hexo-renderer-marked）：标题锚点与参考站对齐
+marked:
+  gfm: true
+  tables: true
+  breaks: false
+  headerIds: true
+  modifyAnchors: 2
+  anchor: ''
+  className: 'headerlink'

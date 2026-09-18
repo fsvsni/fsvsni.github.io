@@ -1,0 +1,33 @@
+<%
+  var kindName = (typeof kind !== 'undefined') ? kind : 'archive';
+  var eyebrowMap = { archive: '归档', category: '分类', tag: '标签' };
+  var eyebrow = eyebrowMap[kindName] || '归档';
+  var h1 = page.title || '归档';
+  var posts = page.posts.toArray();
+  var years = {};
+  posts.forEach(function (p) {
+    var y = p.date.format('YYYY');
+    (years[y] = years[y] || []).push(p);
+  });
+  var yearKeys = Object.keys(years).sort().reverse();
+%>
+<section class="archive">
+  <header class="page-head">
+    <p class="eyebrow"><%= eyebrow %></p>
+    <h1><%= h1 %></h1>
+    <p><%= posts.length %> 篇</p>
+  </header>
+
+  <% yearKeys.forEach(function (y) { %>
+  <h2 class="year"><%= y %></h2>
+  <% years[y].forEach(function (p) { const cats = p.categories.toArray(); %>
+  <a class="archive-item" href="<%- url_for(p.path) %>">
+    <time><%= p.date.format('MM-DD') %></time>
+    <span><%= p.title %></span>
+    <% if (cats.length) { %><em><%= cats[cats.length - 1].name %></em><% } %>
+  </a>
+  <% }) %>
+  <% }) %>
+</section>
+
+<%- include('pager') %>

@@ -1,0 +1,7 @@
+<article class="article page-article">
+  <header class="article-head">
+    <h1><%= page.title %></h1>
+    <% if (page.description) { %><p class="lede"><%= page.description %></p><% } %>
+  </header>
+  <div class="article-body" id="articleBody"><%- page.content %></div>
+</article>

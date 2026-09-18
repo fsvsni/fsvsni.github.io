@@ -1,0 +1,24 @@
+# xiaohei 主题配置
+# 外观复刻自参考博客；这里只放与站点内容相关的可配置项
+
+# 首页 Hero 区
+hero:
+  eyebrow: Artificial Intelligence
+  title: 范珊的博客
+  desc: 记录技术学习、踩坑与思考
+  # 如有首页背景视频，放到 source/img/ 后填文件名，如 /img/home.mp4；留空则使用静态封面
+  video:
+  poster: /img/hero-poster.jpg
+
+# 社交链接（没有的留空，对应按钮自动隐藏）
+github: https://github.com/fsvsni
+wechat:
+  enable: false
+  qr: /img/wechat-qr.jpg
+
+# 页脚署名
+footer_name: fanshan
+
+# 搜索数据源（main.js 读取）
+search:
+  path: /search.json
