@@ -1,10 +1,15 @@
 <% if (!page.current || page.current === 1) { %>
 <section class="hero docs-hero">
   <div class="hero-media">
+    <% if (theme.hero.video) { %>
     <video class="hero-video" autoplay muted loop playsinline preload="metadata"
            poster="<%- url_for(theme.hero.poster) %>" aria-label="首页背景">
-      <% if (theme.hero.video) { %><source src="<%- url_for(theme.hero.video) %>" type="video/mp4"><% } %>
+      <source src="<%- url_for(theme.hero.video) %>" type="video/mp4">
     </video>
+    <% } else { %>
+    <img class="hero-video" src="<%- url_for(theme.hero.poster) %>" alt="" aria-hidden="true"
+         loading="eager" decoding="async">
+    <% } %>
     <div class="hero-cover-overlay">
       <div class="hero-copy">
         <p class="eyebrow"><%= theme.hero.eyebrow %></p>
